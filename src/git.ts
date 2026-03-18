@@ -100,7 +100,7 @@ export function isGitRepo(): boolean {
 /**
  * 解析git status输出
  */
-function parseChanges(output: string): GitChange[] {
+export function parseChanges(output: string): GitChange[] {
   const changes: GitChange[] = []
   const lines = output.trim().split('\n').filter(Boolean)
 
@@ -137,7 +137,7 @@ function parseChanges(output: string): GitChange[] {
 /**
  * 解析已暂存的变更
  */
-function parseStagedChanges(output: string): GitChange[] {
+export function parseStagedChanges(output: string): GitChange[] {
   const changes: GitChange[] = []
   const lines = output.trim().split('\n').filter(Boolean)
 
